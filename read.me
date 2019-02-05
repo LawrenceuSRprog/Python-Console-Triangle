@@ -1,0 +1,68 @@
+The Triangle Project
+====================
+
+There is one main module supported by three files
+   Main ==> Triangle_Code.py
+   It asks the UI for a radius and an angle. This
+   document calls it "Coords".
+
+Two of the files lack classes and have a single
+  method each:
+
+   Plot_lib.py ==> prepares triangle image
+    (from these Coords)
+
+   Ovec_lib.py ==> prepares big numeric labels 
+    (from these Coords)
+ 
+The fourth file has a class called "Trang" and is 
+called "Trang_server_obj". It has four methods:
+
+ 1. __init__   ===> creates blank square with X & Y axes
+ 2. accept_image ===> brings in image *
+ 3. accept_labels ==> brings in (big numeric) labels
+ 4. show ====> prints the entire result to console.
+ --------------------------------------------------
+ * Geometry of <2> means image MUST be completely   
+   Left or Right of the y-Axis. Thus <3> needs a 
+   DIRECTION so that the labels are next to the 
+   image and NOT on top of it.
+
+============= Progress ================================
+
+a. Full documentation attempted in 5 text files
+b. Need to persue 90.1 800 bug (see Problems below)
+
+Recently fixed bugs
+====================
+Two examples Found
+
+  1) Running Tri*
+        An angle of 110 degrees and length 500 gives:
+        "Values look like -171 , 469"
+        but displays -17 +70  NOT -17 +47
+
+  2) Running Plo*
+        The self-test shows (probably) 512 displayed
+        as 12 NOT +51
+
+Problems NOT yet addressed
+==========================
+    Angles near zero or close to either axis.
+
+    1) What if a vertical height is less than  10
+           but width is more than 1000? The 
+           labels would show 010 and 100. 
+
+     
+    2) Generalizing <1>, x and y are different orders
+          of magnitude. Any solution needs to also be
+          valid for both negative and the two being of
+          opposite signs.
+
+Simple Example angle:  90.1 distance 800
+
+
+
+
+
